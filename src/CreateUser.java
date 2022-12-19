@@ -6,7 +6,6 @@ public class CreateUser {
     public static final String ANSI_RESET = "\u001B[0m";
     public static String currentUsername;
     public static String currentPassword;
-    //static boolean isPatient;#
     static boolean isStaff;
     static boolean isGP;
 
@@ -33,7 +32,6 @@ public class CreateUser {
         else {
             currentUsername = newUsername;
             createNewPassword();
-            //System.out.println(currentUsername);
         }
     }
 
@@ -62,9 +60,6 @@ public class CreateUser {
             currentPassword = newPassword;
             System.out.println();
             isPatientOrStaff();
-            //System.out.println("Press enter to Log In.");
-            //LogInClass.username();
-
         }
     }
 
@@ -73,25 +68,20 @@ public class CreateUser {
         System.out.println("Patient: [1]");
         System.out.println("GP: [2]");
         System.out.println("Receptionist: [3]");
-        System.out.println("Please enter either 1, 2 or 3 if you are a patient or staff.");
+        System.out.println("Please enter either 1, 2 or 3 to select an option.");
         String answer = patientOrStaff.nextLine();
 
         if (answer.equals("1")) {
             System.out.println("You have selected patient.");
             isStaff = false;
             isGP = false;
-            //System.out.println("Press enter to Log In.");
             successfulAccount();
-            //Patient class and patient(); method
         }
         else if (answer.equals("2")) {
             System.out.println("You have selected GP.");
             isStaff = true;
             isGP = true;
-            //System.out.println("Press enter to Log In.");
             successfulAccount();
-            //staff superclass (of person) and staff method?
-            //probably asks user if they are doctor or receptionist
         }
         else if (answer.equals("3")) {
             System.out.println("You have selected receptionist.");

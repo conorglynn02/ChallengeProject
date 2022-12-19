@@ -1,13 +1,11 @@
-import java.time.LocalDate;
-
 public class Human {
     private String role;
     private String firstName;
     private String lastName;
-    private LocalDate dateOfBirth;
+    private String dateOfBirth;
     private char gender;
 
-    public Human(String role, String firstName, String lastName, LocalDate dateOfBirth, char gender) {
+    public Human(String role, String firstName, String lastName, String dateOfBirth, char gender) {
         this.role = role;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -36,10 +34,10 @@ public class Human {
         this.lastName = lastName;
     }
 
-    public LocalDate getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
-    public void setDateOfBirth(LocalDate dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

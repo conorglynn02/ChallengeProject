@@ -16,25 +16,40 @@ public class GPInternal {
         String selection = choice.nextLine();
 
         if (selection.equals("1")) {
+            PatientProfiles.createPatients();
+            initialSelectionGP();
 
         }
         else if (selection.equals("2")) {
-
+            System.out.println();
+            GPProfiles.createGpB();
+            System.out.println(GPProfiles.GpB.toString());
+            Scanner input = new Scanner(System.in);
+            System.out.println("Press enter to continue...");
+            String enter = input.nextLine();
+            System.out.println();
+            initialSelectionGP();
         }
         else if (selection.equals("3")) {
-
+            System.out.println();
+            GPProfiles.createGpA();
+            System.out.println(GPProfiles.GpA.toString());
+            System.out.println();
+            ReceptionistProfiles.createReceptionists();
+            initialSelectionGP();
         }
         else if (selection.equals("4")) {
-            diagnosePatient();
+            GP.diagnosePatient();
         }
         else if (selection.equals("5")) {
-            prescribeMedicine();
+            GP.prescribeMedicine();
 
         }
         else if (selection.equals("6")) {
             System.out.println();
             System.out.println("You have successfully logged out.");
             System.out.println("Rerun the application to log back in.");
+            System.exit(0);
         }
         else {
             System.out.println();
@@ -45,35 +60,5 @@ public class GPInternal {
         }
 
 
-    }
-
-    public static void diagnosePatient() {
-        System.out.println();
-        Scanner input = new Scanner(System.in);
-        System.out.println("Please enter the illness you will diagnose your patient.");
-        String illness = input.nextLine();
-        System.out.println("You have entered: " + illness + '.');
-        System.out.println("Your patient is now diagnosed with " + illness + '.');
-        System.out.println();
-        Scanner input2 = new Scanner(System.in);
-        System.out.println("Press enter to continue...");
-        String enter = input2.nextLine();
-        System.out.println();
-        initialSelectionGP();
-    }
-
-    public static void prescribeMedicine() {
-        System.out.println();
-        Scanner input = new Scanner(System.in);
-        System.out.println("Please enter the medicine you wish to prescribe to your patient.");
-        String medicine = input.nextLine();
-        System.out.println("You have entered: " + medicine + '.');
-        System.out.println("Your patient will now take " + medicine + '.');
-        System.out.println();
-        Scanner input2 = new Scanner(System.in);
-        System.out.println("Press enter to continue...");
-        String enter = input2.nextLine();
-        System.out.println();
-        initialSelectionGP();
     }
 }

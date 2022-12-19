@@ -4,15 +4,8 @@ public class LogIn {
 
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_RESET = "\u001B[0m";
-    //static boolean isPatient;
     static boolean isStaff;
     static boolean isGP;
-
-    /*public static void main(String[] args) {
-
-       username();
-
-    }*/
 
     public static void username() {
         Scanner input1 = new Scanner(System.in);
@@ -92,13 +85,6 @@ public class LogIn {
             username();
         }
     }
-    /*public static void loginConor() {
-        System.out.println("Display log in screen here.");
-    }*/
-
-    /*public static void loginAdmin() {
-        System.out.println("Display log in screen here.");
-    }*/
 
     public static void loginVariable() {
         if (isStaff == false) {
